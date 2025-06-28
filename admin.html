@@ -1,0 +1,19 @@
+<!-- filepath: c:\crv\admin.html -->
+<?php
+session_start();
+if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+    header('Location: login.html');
+    exit();
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="universal.css">
+</head>
+<body>
+    <h1>Welcome to the Admin Page</h1>
+    <a href="logout.php">Logout</a>
+</body>
+</html>

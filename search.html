@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Listings | CRV Custom Arms</title>
+    <link rel="stylesheet" href="universal.css">
+    <style>
+        .search-container {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .search-container input {
+            padding: 10px;
+            width: 300px;
+            margin-right: 10px;
+        }
+        .search-container button {
+            padding: 10px;
+        }
+        .results-container {
+            margin-top: 20px;
+        }
+
+        .slideshow-container {
+            position: relative;
+            width: 200px;
+            height: 150px;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+
+        .listing-info {
+            flex: 1;
+        }
+        .listing-info h2 {
+            margin: 0;
+            font-size: 18px;
+            color: white;
+        }
+        .listing-info p {
+            margin: 5px 0;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <iframe class="nav" src="nav.html" frameborder="0"></iframe>
+    <h1 class="brand">Search Engine</h1>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search by name, brand, or type">
+        <button onclick="searchListings()">Search</button>
+    </div>
+    <div class="results-container" id="resultsContainer"></div>
+
+    <script>
+        let listings = [];
+
+        // Load the listings.json file
+        async function loadListings() {
+            try {
+                const response = await fetch('listings.json');
+                if (!response.ok) {
+                    throw new Error('Failed to load listings');
+                }
+                listings = await response.json();
+
+                // Automatically search if a query is present in the URL
+                const query = getQueryParameter('query');
+                if (query) {
+                    document.getElementById('searchInput').value = query;
+                    searchListings();
+                }
+            } catch (error) {
+                console.error('Error loading listings:', error);
+                document.getElementById('resultsContainer').innerHTML = '<p>Error loading listings. Please try again later.</p>';
+            }
+        }
+
+        // Extract query parameter from the URL
+        function getQueryParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Search the listings
+        function searchListings() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const resultsContainer = document.getElementById('resultsContainer');
+            resultsContainer.innerHTML = '';
+
+            if (!query) {
+                resultsContainer.innerHTML = '<p>Please enter a search term.</p>';
+                return;
+            }
+
+            const results = listings.filter(listing =>
+                listing.name.toLowerCase().includes(query) ||
+                listing.brand.toLowerCase().includes(query) ||
+                listing.type.toLowerCase().includes(query)
+            );
+
+            if (results.length === 0) {
+                resultsContainer.innerHTML = '<p>No results found.</p>';
+                return;
+            }
+
+            results.forEach(listing => {
+                const listingItem = document.createElement('div');
+                listingItem.className = 'listing-item';
+
+                // Create slideshow container
+                const slideshowContainer = document.createElement('div');
+                slideshowContainer.className = 'slideshow-container';
+
+                const slides = document.createElement('div');
+                slides.className = 'slides';
+
+                // Generate image paths dynamically
+                for (let i = 1; i <= listing.imageCount; i++) {
+                    const slide = document.createElement('div');
+                    slide.className = 'slide';
+                    const img = document.createElement('img');
+                    img.src = `assets/item/${listing.refNumber}/${i}.png`;
+                    img.alt = `${listing.name} Image ${i}`;
+                    slide.appendChild(img);
+                    slides.appendChild(slide);
+                }
+
+                slideshowContainer.appendChild(slides);
+
+                // Add navigation buttons
+                const prevButton = document.createElement('button');
+                prevButton.className = 'prev';
+                prevButton.innerHTML = '&#10094;';
+                prevButton.onclick = () => moveSlide(slides, -1);
+
+                const nextButton = document.createElement('button');
+                nextButton.className = 'next';
+                nextButton.innerHTML = '&#10095;';
+                nextButton.onclick = () => moveSlide(slides, 1);
+
+                slideshowContainer.appendChild(prevButton);
+                slideshowContainer.appendChild(nextButton);
+
+                listingItem.appendChild(slideshowContainer);
+
+                // Create listing info
+                const listingInfo = document.createElement('div');
+                listingInfo.className = 'listing-info';
+                listingInfo.innerHTML = `
+                    <h2>${listing.name}</h2>
+                    <p><strong>Brand:</strong> ${listing.brand}</p>
+                    <p><strong>Type:</strong> ${listing.type}</p>
+                    <p><strong>Price:</strong> $${listing.price}</p>
+                    <a class="buybox" href="${listing.buyLink}" target="_blank">Buy Now</a>
+                    <button class="more-info" onclick="window.location.href='${listing.refNumber}.html'">More Info</button>
+                `;
+                listingItem.appendChild(listingInfo);
+
+                resultsContainer.appendChild(listingItem);
+            });
+        }
+
+        // Move slides
+        function moveSlide(slides, direction) {
+            const currentIndex = parseInt(slides.dataset.index || '0');
+            const newIndex = (currentIndex + direction + slides.children.length) % slides.children.length;
+            slides.dataset.index = newIndex;
+            slides.style.transform = `translateX(-${newIndex * 100}%)`;
+        }
+
+        // Load the listings when the page loads
+        window.onload = loadListings;
+    </script>
+</body>
+</html>

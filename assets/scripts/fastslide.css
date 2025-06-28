@@ -1,0 +1,31 @@
+.slideshow-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px; /* Adjust width as needed */
+}
+
+.slides {
+    display: flex;
+    width: 100%; /* Ensures smooth looping */
+    animation: scroll 60s linear infinite;
+}
+
+.slide {
+    flex: 0 0 100%;
+}
+
+.slides img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Keyframes for seamless looping */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-700%);
+    }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html><head><link rel="stylesheet" href="universal.css"><style>html {background-image:none;}</style></head><body>
+
+<!-- search-box.html: This content goes inside the iframe -->
+<div class="search-container">
+    <input type="text" id="searchBox" placeholder="Search..." onkeydown="if(event.key === 'Enter') search()">
+    <button onclick="search()">Search</button>
+</div>
+
+<script>
+    // Function to perform the search and redirect the parent (outside iframe) to the search page
+    function search() {
+        const query = document.getElementById('searchBox').value.trim();
+        if (query) {
+            // Redirecting the parent page (outside iframe) to search.html with the search query
+            window.top.location.href = `search.html?query=${encodeURIComponent(query)}`;
+        }
+    }
+</script>
+
+
+	<div class="uptop-logo">
+		<a href="index.html" target="_top"><img class="logosize" src="assets/images/crv.png"></a>
+	</div>
+	<div class="nav-container">
+		<div class="sidebyside-logo" class="nav-item">
+			<a href="index.html" target="_top"><img class="logosize" src="assets/images/crv.png"></a>
+		</div>
+		<div class="nav-item">
+			<div class="dropdown">
+				<a href="guns.html" target="_parent"><div class="dropbtn">Guns</div></a>
+			</div>
+		</div>
+		<div class="nav-item">
+			<div class="dropdown">
+				<a href="service.html" target="_parent"><div class="dropbtn">Service</div></a>
+			</div>
+		</div>
+		<div class="nav-item">
+			<div class="dropdown">
+				<a href="parts.html" target="_parent"><div class="dropbtn">Parts</div></a>
+			</div>
+		</div>
+		<div class="nav-item">
+			<div class="dropdown">
+				<a href="contact.html" target="_parent"><div class="dropbtn">Contact</div></a>
+			</div>
+		</div>
+	</div>
+</div>
+</body></html>

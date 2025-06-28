@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cart | CRV Custom Arms</title>
+    <meta name="description" content="Your cart items.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://crvcustomarms.com/cart.html">
+    <link rel="stylesheet" href="universal.css">
+</head>
+<body>
+    <div class="cart-page">
+        <a href="index.html" target="_top"><img style="width: 200px; height: auto; margin-bottom: 20px;" src="assets/images/crv.png"></a>
+        <h1>Your Cart</h1>
+        <button onclick="window.location.href='contact.html'">Contact for Purchase</button>
+        <button onclick="printCart()">Print</button>
+        <button onclick="clearCart()">Clear Cart</button>
+        <button onclick="window.location.href='checkout.html'">Proceed to Checkout</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Ref Number</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="cartItems"></tbody>
+        </table>
+    </div>
+
+    <script src="shared.js"></script>
+    <script>
+        // Display cart items on page load
+        updateCart();
+    
+        // Print the cart
+        function printCart() {
+            window.print();
+        }
+    
+        // Clear the cart
+        function clearCart() {
+            cart = [];
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCart();
+        }
+    
+        // Proceed to checkout
+        function proceedToCheckout() {
+            if (cart.length === 0) {
+                alert("Your cart is empty. Add items to proceed to checkout.");
+                return;
+            }
+            window.location.href = 'checkout.html';
+        }
+    </script>
+</body>
+</html>

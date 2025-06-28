@@ -1,0 +1,26 @@
+.slideshow-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;  /* You can adjust to any fixed width if necessary */
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    animation: scroll 30s linear infinite;  /* Set the scroll animation */
+}
+
+.slides img {
+    width: 100%;  /* Ensure images take up the full width of the container */
+    object-fit: cover;
+}
+
+/* Keyframes for continuous scrolling effect */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);  /* Start from the leftmost position */
+    }
+    100% {
+        transform: translateX(-50%);  /* End at the point where the first image disappears */
+    }
+}

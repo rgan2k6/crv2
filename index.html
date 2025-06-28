@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRV Custom Arms</title>
+    <meta name="description" content="Operated by Chris Vendel CRV Custom Arms specialzes in competition shotguns, providing parts and service to a wide selection of firearms.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://crvcustomarms.com/index.html">
+    <link rel="stylesheet" href="universal.css">
+    <style> font-family: exo !important;</style>
+</head>
+<body>
+    <div class="ilf-nav">
+        <iframe class="nav" frameborder="0" src="bnav.html"></iframe>
+    </div>
+    <div class="search-container">
+        <input type="text" id="searchBox" placeholder="Search..." onkeydown="if(event.key === 'Enter') search()">
+        <button onclick="search()">GO</button>
+    </div>
+    <script>
+        function search() {
+            const query = document.getElementById('searchBox').value.trim();
+            if (query) {
+                window.top.location.href = `search.html?query=${encodeURIComponent(query)}`;
+            }
+        }
+    </script>
+    <br><br><br>
+    <div class="ng-logo">
+        <a href="index.html" target="_parent"> 
+            <img src="assets/images/crv.png" border="0" width="100%" height="auto" align="center">
+        </a>
+    </div>
+    <br><br>
+    <div class="navgrid">
+        <div class="ng-g">
+            <div class="a">
+                <a href="guns.html" target="_parent">
+                    <img src="assets/clearcoat.png" border="0" width="100%" height="auto" align="center">
+                </a>
+            </div>
+        </div>
+        <div class="ng-s">
+            <div class="a">
+                <a href="service.html" target="_parent">
+                    <img src="assets/clearcoat.png" border="0" width="100%" height="auto" align="center">
+                </a>
+            </div>
+        </div>
+        <div class="ng-p">
+            <div class="a">
+                <a href="parts.html" target="_parent">
+                    <img src="assets/clearcoat.png" border="0" width="100%" height="auto" align="center">
+                </a>
+            </div>
+        </div>
+        <div class="ng-c">
+            <div class="a">
+                <a href="contact.html" target="_parent">
+                    <img src="assets/clearcoat.png" border="0" width="100%" height="auto" align="center">
+                </a>
+            </div>
+        </div>
+    </div>
+    <iframe class="indslide" frameborder="0" src="indslide.html"></iframe>
+    <div class="grid-container">
+        <div class="grid-item">
+            <iframe width="100%" height="100%" style="border:1" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJlTidPQ9hyIkRsBhZsCvxnb4&key=AIzaSyA6pxFaB3bj7RIxTM2GcfM-CDUCBLCj8Uc"></iframe>
+        </div>
+        <div class="grid-item">
+            <div style=" font-family: exo !important;margin-bottom: 400px; padding: 5px; margin: 10px; background-color: rgba(255,0,0,0.6); border: 3px solid; display: inline-block">
+                <h1>What we do</h1>
+                <p>Operated by Chris Vendel, CRV Custom Arms specializes in <b>competition shotguns</b>, <b>refinishing</b>, <b>gun and stock fitting</b>, <b>recoil-reduction systems</b>, <b>adjustable combs and pads</b>, <b>trigger work</b> and much more! Offering custom alterations, repairs and personal gun fitting on Seven Valleys RD, in Glen Rock, Pennsylvania.</p>
+                <h2>Navigation</h2>
+                <p>For gun services and their prices click the <b>Service</b> tab. For parts click the <b>Parts</b> tab. For contact information, select the <b>Contact</b> tab, and to browse or gun selection the <b>Guns</b> tab.</p>
+                <p>We provide service to a wide selection of makes and models, including but not limited to: <i>Silver Seitz</i>, <i>Krieghoff</i>, <i>Kolar</i>, <i>Perazzi</i>, <i>Remington</i>, <i>Winchester</i>, <i>SKB</i>, <i>Rottweil</i>, <i>Browning</i>  and more...</p>
+                <br>
+                <p><a href="precision.html" target="_top"><img src="assets/images/precision.png" background-size: contains; border="0" width="170" height="auto" align="center"></a> &nbspFor <b><i>precision manufacturing</i></b></p>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br>
+    <iframe width="100%" height="180" frameborder="0" src="bottom.html"></iframe>
+    <script src="shared.js"></script>
+    <script>
+        addCheckoutButton();
+    </script>
+</body>
+</html>

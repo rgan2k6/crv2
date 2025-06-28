@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index slideshow</title>
+    <style>
+        /*general*/
+        a {text-decoration: none; color: black; font-family: rodchenko;}
+        a:hover {text-decoration: none; color: white; font-family: rodchenko;}
+        @font-face {font-family: rodchenko; src: url(assets/fonts/rc.ttf);}
+        @font-face {font-family: exo; src: url(assets/fonts/exo/exo.ttf);}
+        .bottombit{padding: 0; position: static; left: 0; bottom: 0; width: 100%; color: white; text-align: center; font-family: sans-serif;}
+        
+        @media (max-width: 800px) {
+            .grid-container {display: grid; gap: 10px; grid-template-columns: 100%; width: auto;}
+            .grid-item {padding: 10px; margin-right: 5px; font-size: auto;}
+            .element {max-width: fit-content; margin-left: auto; margin-right: auto; position: relative;}
+        }
+        
+        @media (min-width: 800px) {
+            .grid-container {display: grid; gap: 10px; grid-template-columns: 50% 50%; width: auto;}
+            .subgrid {display: grid; gap: 10px; grid-template-columns: 50% 50%; margin-right: 10px; width: auto;}
+            .grid-item {padding: 10px; margin-right: 5px; font-size: auto;}
+            .element {max-width: fit-content; margin-left: auto; margin-right: auto; position: relative;}
+        }
+        
+        .slideshow-container {position: relative; overflow: hidden;}
+        .slides {display: flex; transition: transform 0.5s ease-in-out;}
+        .slide {min-width: 100%; box-sizing: border-box;}
+        .slide img {width: 100%;}
+        .prev, .next {position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 10px; cursor: pointer;}
+        .prev {left: 10px; }
+        .next {right: 10px; }
+        .brandpage-slides {max-width: 65vw; position: relative; margin: auto; border: 5px solid #8b0000;}
+        
+        @media (max-width: 1280px) {
+            .itempage-slides {max-width: 500px; position: relative; margin: auto; border: 5px solid #8b0000;}
+            .selection {display: grid; gap: 5px; grid-template-columns: 100%; width: auto;}
+        }
+        
+        @media (min-width: 1280px) {
+            .itempage-slides {max-width: 100%; position: relative; margin: auto; border: 5px solid #8b0000;}
+            .selection {display: grid; gap: 5px; grid-template-columns: 50% 50%; width: auto;}
+        }
+        
+        .results { margin-top: 20px; }
+        .result-item { margin-bottom: 10px; }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        #searchBox {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            color: white;
+            background: black; 
+            border: 1px solid #ccc;
+            flex-grow: 1;
+            margin-right: 5px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-left: none;
+            background-color: red;
+            color: white;
+            border-radius: 0px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        .bnav {margin-bottom: -10px;}
+        .tbox {width: 100%; font-size: 18px; background-color: rgba(0,0,0,1); font-family: Exo; padding: 3px 6px; display: inline-block;}
+        .service{width: 100%;}
+        .r1{background-color: white;}
+        .r2{background-color: lightgrey;}
+        .titlebox {font-family: exo; text-align: left; background-color: rgba(255,0,0,0.5); border: 3px solid;}
+        .title {margin-left: 10px; font-family: exo; text-align: left; font-size: 30px;}
+        .dsctext {text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000; color: white; margin: 10px;}
+        .dscbox {background-color: rgba(0,0,0,0.5); border: 3px solid; font-family: Exo; padding: 10px;}
+        .buybox {padding: 10px; margin: 10px; background-color: rgba(255, 19, 22,0.7); border: 2px solid; display:inline-block; color: black;}
+        .buybox:hover {color: white;}
+        .backbox {font-size: 25px; padding: 10px 20px; margin: 10px; background-color: rgba(255, 19, 22,0.7); border: 2px solid; display:inline-block}
+        .brandprice {text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000; color: white; margin: 10px; font-size: 22px;}
+        .listingprice {text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000; color: white; margin: 10px; font-size: 22px;}
+        .noproduct {font-family: rodchenko; font-size: 30px; text-align: center; padding: 15px 10px; margin: 25px; background-color: rgba(255,0,0,0.6); border: 3px solid; display:block}
+        .brand {font-family: rodchenko; font-size: 50px; text-align: center; padding: 20px 10px; margin: 10px; background-color: rgba(255,0,0,0.6); border: 3px solid; display:block}
+        .option-style{padding: 10px; border: 2px solid; font-size: 22px; background-color: rgba(255,0,0,0.6);}
+        .option-content {padding: 5px; text-align: center;}
+        
+        @media only screen and (min-width: 1000px) {
+            .element {max-width: fit-content; margin-left: auto; margin-right: auto; z-index: 9; position: relative;}
+            .ilf-nav {display: block; margin-bottom: -4vw;}
+            .indslide {display: block; margin: 0 auto; width: 70%; height: 410px; overflow: hidden; border: none;}
+            .navgrid {display: none;}
+            .ng-logo {display: none;}
+        }
+        
+        @media only screen and (max-width: 1000px) {
+            .ilf-nav {display: none;}
+            .indslide {display: block; margin: 0 auto; width: 70%; height: 30vw; overflow: hidden; border: none;}
+            .navgrid {display: grid; grid-template-columns: 25% 25% 25% 25%;}
+            .ng-c {background-image: url(assets/images/navgrid/contact.png); background-size: cover; border: 5px solid;}
+            .ng-c:hover {background-image: url(assets/images/navgrid/contact_hover.png); background-size: cover; border: 5px solid;}
+            .ng-g {background-image: url(assets/images/navgrid/guns.png); background-size: cover; border: 5px solid;}
+            .ng-g:hover {background-image: url(assets/images/navgrid/guns_hover.png); background-size: cover; border: 5px solid;}
+            .ng-p {background-image: url(assets/images/navgrid/parts.png); background-size: cover; border: 5px solid;}
+            .ng-p:hover {background-image: url(assets/images/navgrid/parts_hover.png); background-size: cover; border: 5px solid;}
+            .ng-s {background-image: url(assets/images/navgrid/service.png); background-size: cover; border: 5px solid;}
+            .ng-s:hover {background-image: url(assets/images/navgrid/service_hover.png); background-size: cover; border: 5px solid;}
+            .ng-logo {margin-left: 30%; margin-right: 30%; margin-top: -50px; margin-bottom: -30px;}
+        }
+        
+        .searchlogo {display: block; margin: 0 auto; margin-top: 10px; width: 100%; height: auto; overflow: hidden; border-bottom: solid 5px; background: rgba(0, 0, 0, 0.4);}
+        .nav{font-family: rodchenko; margin-top: -7px; width:100%; height: auto; border-bottom: solid 5px; background: rgba(0, 0, 0, 0.4);}
+        .dropdown {position: relative; display: inline-block;}
+        .dropdown:hover .dropbtn {background-color: #8B0000; color: white;}
+        .dropbtn {color: black; background-color: rgb(230,50,35); width: 17vw; height: auto; border: 2px solid; padding: 6px 10px;}
+        .nav-container {display: grid; gap: 0px; margin-top: 60px; grid-template-columns: 20% 20% 20% 20% 22%; width: auto;}
+        .nav-item {font-size: 30px; text-align: center;}
+        .logosize {width: 200px; height:auto; margin-top: -20px;}
+        
+        @media only screen and (min-width: 200px) {
+            .nav {height: 210px;}
+            .nav-item {font-size: 4.5vw; margin-top: -10px; }
+            .sidebyside-logo {display: none;}
+            .uptop-logo {display: block; margin-left: 30%; margin-right: 50%;}
+            .dropbtn {padding: 6px 3px; width: 22vw;}
+            .nav-container {grid-template-columns: 25% 25% 25% 25%;}
+            .logosize {width: 38vw; height:auto; margin-bottom: -65px;}
+        }
+        
+        @media only screen and (min-width: 300px) {
+            .nav {height: 200px;}
+            .nav-item {font-size: 4.5vw; margin-top: -10px; }
+            .sidebyside-logo {display: none;}
+            .uptop-logo {display: block; margin-left: 30%; margin-right: 50%;}
+            .dropbtn {padding: 6px 3px; width: 22vw;}
+            .nav-container {grid-template-columns: 25% 25% 25% 25%;}
+            .logosize {width: 38vw; height:auto; margin-bottom: -65px;}
+        }
+        
+        @media only screen and (min-width: 350px) {
+            .nav {height: 225px;}
+            .nav-item {font-size: 4.5vw; margin-top: 10px; }
+            .sidebyside-logo {display: none;}
+            .uptop-logo {display: block; margin-left: 30%; margin-right: 50%;}
+            .dropbtn {padding: 6px 3px; width: 22vw;}
+            .nav-container {grid-template-columns: 25% 25% 25% 25%;}
+            .logosize {width: 38vw; height:auto; margin-bottom: -65px;}
+        }
+        
+        @media only screen and (min-width: 500px) {
+            .nav {height: 275px;}
+            .nav-item {font-size: 4.5vw; margin-top: 30px; }
+            .sidebyside-logo {display: none;}
+            .uptop-logo {display: block; margin-left: 34%;}
+            .dropbtn {padding: 6px 3px; width: 20vw;}
+            .nav-container {grid-template-columns: 25% 25% 25% 25%;}
+            .logosize {width: 30vw; height:auto; margin-bottom: -90px;}
+        }
+        
+        @media only screen and (min-width: 700px) {
+            .nav {height: 285px;}
+            .nav-item {font-size: 4vw; margin-top: 40px; }
+            .sidebyside-logo {display: none;}
+            .uptop-logo {display: block; margin-left: 35%;}
+            .dropbtn {padding: 6px 3px; width: 20vw;}
+            .nav-container {grid-template-columns: 25% 25% 25% 25%;}
+            .logosize {width: 30vw; height:auto; margin-bottom: -100px;}
+        }
+        
+        @media only screen and (min-width: 800px) {
+            .nav {height: 295px;}
+            .nav-item {font-size: 4vw; margin-top: 60px; }
+            .sidebyside-logo {display: none;}
+            .uptop-logo {display: block; margin-left: 34%;}
+            .dropbtn {padding: 6px 3px; width: 20vw;}
+            .nav-container {grid-template-columns: 25% 25% 25% 25%;}
+            .logosize {width: 30vw; height:auto; margin-bottom: -120px;}
+        }
+        
+        @media only screen and (min-width: 1000px) {
+            .nav {height: 225px;}
+            .nav-item {font-size: 3vw; margin-top: 10px; }
+            .sidebyside-logo {display: block;}
+            .uptop-logo {display: none; margin-left: 34%;}
+            .dropbtn {padding: 6px 3px; width: 18vw;}
+            .nav-container {grid-template-columns: 20% 20% 20% 20% 20%;}
+            .logosize {width: 18vw; height:auto; margin-bottom: -85px;}
+        }
+        
+        @media only screen and (min-width: 1001px) {
+            .uptop-logo{margin-top: -20px;}
+            .sidebyside-logo{margin-top: -20px;}
+            .dropdown{margin-top: -20px;}
+        }
+        
+        @media only screen and (max-width: 999px) {
+            .uptop-logo{margin-top: 20px;}
+            .sidebyside-logo{margin-top: 20px;}
+            .dropdown{margin-top: 20px;}
+        }
+
+        /* Add these new styles for add-to-cart and buy-now buttons */
+        .add-to-cart, .buy-now {
+            color: black;
+            background-color: rgba(255, 19, 22, 0.7);
+        }
+        
+        .add-to-cart:hover, .buy-now:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="slideshow-container" data-autoplay="true" data-transition="true" data-arrows="true">
+        <div class="slides">
+            <div class="slide"><a href="rottweilparts.html" target="_parent"><img src="assets/slides/1.png" style="width:100%;"></a></div>
+            <div class="slide"><a href="browningguns.html" target="_parent"><img src="assets/slides/2.png" style="width:100%"></a></div>
+            <div class="slide"><a href="crvparts.html" target="_parent"><img src="assets/slides/5.png" style="width:100%"></a></div>
+            <div class="slide"><a href="shamrockleathers.html" target="_parent"><img src="assets/slides/3.png" style="width:100%"></a></div>
+            <div class="slide"><a href="rottweilparts.html" target="_parent"><img src="assets/slides/1.png" style="width:100%;"></a></div>
+            <div class="slide"><a href="winchesterguns.html" target="_parent"><img src="assets/slides/6.png" style="width:100%"></a></div>
+            <div class="slide"><a href="krieghoffparts.html" target="_parent"><img src="assets/slides/7.png" style="width:100%"></a></div>
+        </div>
+    </div>
+    <script src="assets/scripts/slide.js"></script>
+</body>
+</html>

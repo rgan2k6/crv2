@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Silver Seitz Parts | CRV Custom Arms</title>
+    <meta name="description" content="Silver Seitz parts for sale.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://crvcustomarms.com/silverseitzparts.html">
+    <link rel="stylesheet" href="universal.css">
+</head>
+<body>
+
+<div class="head">
+    <div class="search-container">
+        <input type="text" id="searchBox" placeholder="Search..." onkeydown="if(event.key === 'Enter') search()">
+        <button onclick="search()">Search</button>
+    </div>
+
+	<div class="uptop-logo">
+		<a href="index.html" target="_top"><img class="logosize" src="assets/images/crv.png"></a>
+	</div>
+
+	<div class="nav-container">
+		<div class="sidebyside-logo" class="nav-item">
+			<a href="index.html" target="_top"><img class="logosize" src="assets/images/crv.png"></a>
+		</div>
+		<div class="nav-item">
+			<div class="dropdown">
+				<a href="guns.html" target="_parent"><div class="dropbtn">Guns</div></a>
+			</div>
+		</div>
+		<div class="nav-item">
+			<div class="dropdown">
+				<a href="service.html" target="_parent"><div class="dropbtn">Service</div></a>
+			</div>
+		</div>
+		<div class="nav-item">
+			<div class="dropdown">
+				<a href="parts.html" target="_parent"><div class="dropbtn">Parts</div></a>
+			</div>
+		</div>
+		<div class="nav-item">
+			<div class="dropdown">
+				<a href="contact.html" target="_parent"><div class="dropbtn">Contact</div></a>
+			</div>
+		</div>
+	</div>
+
+</div>
+    <h1 class="brand">Silver Seitz Parts</h1>
+
+    <!-- Button Container -->
+    <div class="button-container">
+        <button class="back-button" onclick="window.location.href='parts.html'">Back</button>
+     
+    </div>
+
+    <!-- Firearm Selection Bar -->
+    <div class="sorting-container">
+        <label for="brandFilter">Filter by Brand:</label>
+        <select id="brandFilter" onchange="updateBrandFilter()">
+            <option value="Silver Seitz" selected>Silver Seitz</option>
+            <option value="all">All Brands</option>
+        </select>
+
+        <label for="modelFilter">Filter by Model:</label>
+        <select id="modelFilter">
+            <option value="all">All Models</option>
+        </select>
+
+        <label for="typeFilter">Filter by Type:</label>
+        <select id="typeFilter">
+            <option value="all">All Types</option>
+        </select>
+
+        <label for="minPrice">Min Price:</label>
+        <input type="number" id="minPrice" placeholder="Min Price" min="0">
+
+        <label for="maxPrice">Max Price:</label>
+        <input type="number" id="maxPrice" placeholder="Max Price" min="0">
+
+        <button onclick="filterListings()">Apply Filters</button>
+        <button onclick="removeFilters()">Remove Filters</button>
+    </div>
+
+    <!-- Hidden Allocation Filter -->
+    <select id="allocationFilter" class="hidden">
+        <option value="part" selected>Part</option>
+    </select>
+
+    <div id="listingsContainer"></div>
+
+    <script src="shared.js"></script>
+    <script>
+        let brandFilter = "Silver Seitz"; // Default brand filter
+
+        function toggleFilters() {
+            const sortingContainer = document.querySelector('.sorting-container');
+            sortingContainer.style.display = sortingContainer.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function updateBrandFilter() {
+            const brandSelect = document.getElementById("brandFilter");
+            brandFilter = brandSelect.value;
+            displayListings();
+        }
+
+        function displayListings(filteredListings = listings) {
+            const filtered = filteredListings.filter(item => item.allocation === "part" && (brandFilter === "all" || item.brand === brandFilter));
+            const listingsContainer = document.getElementById("listingsContainer");
+            listingsContainer.innerHTML = "";
+
+            filtered.forEach(listing => {
+                const listingCard = document.createElement("div");
+                listingCard.classList.add("listing-card");
+
+                // Generate image paths dynamically
+                const imagePaths = generateImagePaths(listing.refNumber, listing.imageCount);
+
+                // Slideshow container with data attributes
+                const slideshowContainer = document.createElement("div");
+                slideshowContainer.classList.add("slideshow-container");
+                slideshowContainer.dataset.autoplay = listing.autoplay;
+                slideshowContainer.dataset.transition = listing.transition;
+                slideshowContainer.dataset.arrows = listing.arrows;
+
+                const slides = document.createElement("div");
+                slides.classList.add("slides");
+                slides.dataset.index = 0; // Keep track of the current slide index
+
+                imagePaths.forEach(imgSrc => {
+                    const slide = document.createElement("div");
+                    slide.classList.add("slide");
+                    const img = document.createElement("img");
+                    img.src = imgSrc;
+                    img.alt = `${listing.name} Image`;
+                    slide.appendChild(img);
+                    slides.appendChild(slide);
+                });
+
+                slideshowContainer.appendChild(slides);
+                listingCard.appendChild(slideshowContainer);
+
+                // Add navigation arrows if enabled
+                if (listing.arrows) {
+                    const prevButton = document.createElement("button");
+                    const nextButton = document.createElement("button");
+                    prevButton.innerHTML = "&#10094;";
+                    nextButton.innerHTML = "&#10095;";
+                    prevButton.className = "prev";
+                    nextButton.className = "next";
+                    slideshowContainer.appendChild(prevButton);
+                    slideshowContainer.appendChild(nextButton);
+
+                    prevButton.addEventListener("click", () => {
+                        moveSlide(slides, -1, slideshowContainer);
+                    });
+
+                    nextButton.addEventListener("click", () => {
+                        moveSlide(slides, 1, slideshowContainer);
+                    });
+                }
+
+                // Listing details
+                const details = document.createElement("div");
+                details.innerHTML = `
+                    <h2>${listing.name}</h2>
+                    <p>Price: ${listing.price !== null ? formatPrice(listing.price) : ''}</p>
+                    <button class="more-info" onclick="window.location.href='${listing.refNumber}.html'">More Info</button>
+                    <button class="contact" onclick="window.location.href='contact.html'">Contact</button>
+                `;
+                listingCard.appendChild(details);
+
+                listingsContainer.appendChild(listingCard);
+
+                startSlideshow(slideshowContainer, slides);
+            });
+        }
+
+        // Initial setup
+        fetchListings().then(() => {
+            displayListings(); // Display listings based on the default brand filter
+        });
+    </script>
+
+    <br><br><br><br>
+    <iframe src="bottom.html" width="100%" height="180" frameborder="0"></iframe>
+</body>
+</html>
