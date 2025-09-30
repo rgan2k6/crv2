@@ -1,0 +1,9 @@
+{
+  "rottweilguns": true,
+  "rottweilparts": false,
+  "remingtonguns": false,
+  "remingtonparts": true,
+  "browningguns": false,
+  "browningparts": false
+  // add more as needed for each brand/page
+}
