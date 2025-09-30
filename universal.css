@@ -108,7 +108,7 @@ button.contact:hover {color: white; background-color: rgba(160,0,10,.7);}
 .indslide {display: block; margin: 0 auto; width: 70%; height: 30vw; overflow: hidden; border: none;}
 }
 .searchlogo {display: block; margin: 0 auto; margin-top: 10px; width: 100%; height: auto; overflow: hidden; border-bottom: solid 5px; background: rgba(0, 0, 0, 0.4);;}
-.nav{font-family: rodchenko;  margin-top: -7px; width:100%; height: auto; border-bottom: solid 5px; background: rgba(0, 0, 0, 0.4);}
+.nav{font-family: rodchenko;  margin-top: -7px; width:100%; height: auto; border-bottom: solid 5px; background: rgba(255,255,255, 0.4);}
 .dropdown {position: relative; display: inline-block;}
 .dropdown:hover .dropbtn {background-color: #8B0000; color: white;}
 .dropbtn {color: black; background-color: rgb(230,50,35); width: 17vw; height: auto; border: 2px solid; padding: 6px 10px;}
