@@ -1,43 +1,5 @@
 [
     {
-        "id": 2,
-        "allocation": "gun",
-        "brand": "Rottweil",
-        "model": "72 AAT",
-        "type": "Shotgun",
-        "name": "Rottweil 72 AAT (#73620) | USED",
-        "price": 1400.00,
-        "refNumber": "rl-72-73620",
-        "imageCount": 2,
-        "autoplay": true,
-        "transition": true,
-        "arrows": false,
-        "showMoreInfo": true,
-        "showAddToCart": false,
-        "showBuyNow": false,
-        "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_ac2032ad06cef3a08cb3455cf3358705"
-    },
-    {
-        "id": 3,
-        "allocation": "gun",
-        "brand": "Rottweil",
-        "model": "72 AAT",
-        "type": "Shotgun",
-        "name": "Rottweil 72 AAT (#73958) | USED",
-        "price": 1600,
-        "refNumber": "rl-72-73958",
-        "imageCount": 5,
-        "autoplay": true,
-        "transition": true,
-        "arrows": false,
-        "showMoreInfo": true,
-        "showAddToCart": false,
-        "showBuyNow": false,
-        "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_80eba10bf6b905f40a05e1ddf1508207"
-    },
-    {
         "id": 4,
         "allocation": "gun",
         "brand": "Perazzi",
@@ -54,7 +16,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_c31c433c1c66fbe472c03d553c1b1536"
+        "buyLink": "contact.html"
     },
     {
         "id": 5,
@@ -73,7 +35,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_dec24b95b7c422091b2fe1213f84ae74"
+        "buyLink": "contact.html"
     },
     {
         "id": 6,
@@ -92,26 +54,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_b6e7bcf36bc62e345374f105fd323800"
-    },
-    {
-        "id": 8,
-        "allocation": "gun",
-        "brand": "Winchester",
-        "model": "Model 101 Diamond Grade",
-        "type": "Shotgun",
-        "name": "Winchester Model 101 Diamond Grade (#DG478795E) | USED",
-        "price": 1500,
-        "refNumber": "wr-model101-dg478795e",
-        "imageCount": 2,
-        "autoplay": true,
-        "transition": true,
-        "arrows": false,
-        "showMoreInfo": true,
-        "showAddToCart": false,
-        "showBuyNow": false,
-        "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_8482201ea006fba1678b2d4386b81e78"
+        "buyLink": "contact.html"
     },
     {
         "id": 9,
@@ -130,7 +73,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_5c0b4d11de0c9019cef6007625616fdb"
+        "buyLink": "contact.html"
     },
     {
         "id": 10,
@@ -149,7 +92,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_bf20d8deee9aa4971ea04240e1ad3706"
+        "buyLink": "contact.html"
     },
     {
         "id": 11,
@@ -168,7 +111,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_a573c3f52533e50535ff9d4d5afa94d9"
+        "buyLink": "contact.html"
     },
     {
         "id": 12,
@@ -187,7 +130,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_6bfacc540832dea716b0c26851540f14"
+        "buyLink": "contact.html"
     },
     {
         "id": 13,
@@ -206,7 +149,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_17167375bc09638b67f29bd1c345df9f"
+        "buyLink": "contact.html"
     },
     {
         "id": 14,
@@ -225,7 +168,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_153ed05d97f4baf56524a202cfd7779f"
+        "buyLink": "contact.html"
     },
     {
         "id": 14.01,
@@ -244,7 +187,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_ab1283e4041c61730dd09661af377d59"
+        "buyLink": "contact.html"
     },
     {
         "id": 14.001,
@@ -263,7 +206,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_7aab6f8cd6c34f6490fcf6e0134a2541"
+        "buyLink": "contact.html"
     },
     {
         "id": 14.002,
@@ -282,7 +225,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_b735c361c5c7f0b01a4f7cf7a60836ee"
+        "buyLink": "contact.html"
     },
     {
         "id": 14.003,
@@ -301,7 +244,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_a89a340d34167b5fc9286a1b39339062"
+        "buyLink": "contact.html"
     },
     {
         "id": 15,
@@ -320,7 +263,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_b6d8779e76d808b5efdde8306fa0fb0d"
+        "buyLink": "contact.html"
     },
     {
         "id": 16,
@@ -339,7 +282,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_67a26c9b8e41dde3e49a26ac87d30bbe"
+        "buyLink": "contact.html"
     },
     {
         "id": 17,
@@ -358,7 +301,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_d253b8c5253c5a6a72dc17bfab3bb086"
+        "buyLink": "contact.html"
     },
     {
         "id": 18,
@@ -377,7 +320,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_4f8ba12d51d577507f777728bbe43c22"
+        "buyLink": "contact.html"
     },
     {
         "id": 19,
@@ -396,7 +339,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_2f6db6ef8b566f9edfbbbc393ad13d37"
+        "buyLink": "contact.html"
     },
     {
         "id": 21,
@@ -415,7 +358,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_ec7e7693a508bffeb2511526c46783b9"
+        "buyLink": "contact.html"
     },
     {
         "id": 22,
@@ -434,7 +377,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_a30a9d78fbcc38adb79e861c92a7501b"
+        "buyLink": "contact.html"
     },
     {
         "id": 23,
@@ -453,7 +396,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_ce9f4d0bed809b89618103a486c8b1b9"
+        "buyLink": "contact.html"
     },
     {
         "id": 24,
@@ -472,7 +415,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_ad1e725911dc55b9a466559fa46ef06a"
+        "buyLink": "contact.html"
     },
     {
         "id": 25,
@@ -491,7 +434,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_c008555848762128acb6da1bf25599b4"
+        "buyLink": "contact.html"
     },
     {
         "id": 26,
@@ -510,7 +453,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_c172739a1ef13f9f40b281ca5f2a5044"
+        "buyLink": "contact.html"
     },
     {
         "id": 27,
@@ -529,7 +472,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_b4310a6048646b7fd972817a0d51c1d9"
+        "buyLink": "contact.html"
     },
     {
         "id": 28,
@@ -548,7 +491,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_99cfb646e9f5181b162b43a199be0bed"
+        "buyLink": "contact.html"
     },
     {
         "id": 29,
@@ -567,7 +510,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_edca07287e2cc2df59d8e3b43d4da1da"
+        "buyLink": "contact.html"
     },
     {
         "id": 30,
@@ -586,7 +529,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_ebae632943ced9dbefc3f979b8ac0064"
+        "buyLink": "contact.html"
     },
     {
         "id": 31,
@@ -605,7 +548,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_cdec42ae4fe07cb3723696c9dc3afea0"
+        "buyLink": "contact.html"
     },
     {
         "id": 32,
@@ -624,7 +567,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_f3e00a8103fd4a4ab81856a1aa2daf2f"
+        "buyLink": "contact.html"
     },
     {
         "id": 33,
@@ -643,7 +586,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_91d18d015f8eefc298dd2f5bad1a8cec"
+        "buyLink": "contact.html"
     },
     {
         "id": 34,
@@ -662,7 +605,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_a7564092ea4d143e4101295767bed786"
+        "buyLink": "contact.html"
     },
     {
         "id": 35,
@@ -681,7 +624,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_8dcaef83c8ea5eda9d959dad1f0c257f"
+        "buyLink": "contact.html"
     },
     {
         "id": 36,
@@ -700,7 +643,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_b2dcfd63a757ec1f504dd62b42427025"
+        "buyLink": "contact.html"
     },
     {
         "id": 37,
@@ -719,27 +662,9 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_7a415169b31ef9ad372e7857ec87cf8b"
+        "buyLink": "contact.html"
     },
-    {
-        "id": 39,
-        "allocation": "part",
-        "brand": "Perazzi",
-        "model": "TM1",
-        "type": "Stock",
-        "name": "Perazzi TM1 Stock (CRV1) | NEW",
-        "price": 400,
-        "refNumber": "pi-tm1-s-crv1",
-        "imageCount": 1,
-        "autoplay": false,
-        "transition": false,
-        "arrows": false,
-        "showMoreInfo": true,
-        "showAddToCart": false,
-        "showBuyNow": false,
-        "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_083dcbb8379550f8de2c876f127d9196"
-    },
+    
     {
         "id": 40,
         "allocation": "part",
@@ -757,7 +682,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_47ef0870b750ce2a8bfc71b6c0f13aea"
+        "buyLink": "contact.html"
     },
     {
         "id": 41,
@@ -776,7 +701,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_db1f68f50673913046fb33247d7bad5d"
+        "buyLink": "contact.html"
     },
     {
         "id": 42,
@@ -795,7 +720,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_7f55e78c0a6b7b1f0e17a0a4263be5e0"
+        "buyLink": "contact.html"
     },
     {
         "id": 43,
@@ -814,7 +739,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_811d84c878be7d3d6789574b67b11b5b"
+        "buyLink": "contact.html"
     },
     {
         "id": 44,
@@ -833,7 +758,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_c35da5c3b1fa8c3c00a7a2bc8afd4203"
+        "buyLink": "contact.html"
     },
     {
         "id": 46,
@@ -852,7 +777,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_a34d6a23cd7142c1e8393f0250b378b7"
+        "buyLink": "contact.html"
     },
     {
         "id": 47,
@@ -871,7 +796,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_c613f8e44a78e7c5a6defbf08510dc24"
+        "buyLink": "contact.html"
     },
     {
         "id": 48,
@@ -890,7 +815,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_5bb08f671123e88cb03f99d846add3cc"
+        "buyLink": "contact.html"
     },
     {
         "id": 49,
@@ -909,7 +834,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_6911bf6a0e7b6aa631a2a49cb30434c6"
+        "buyLink": "contact.html"
     },
     {
         "id": 50,
@@ -928,27 +853,9 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_904ea9880777463f138b8af5d266f9a8"
+        "buyLink": "contact.html"
     },
-    {
-        "id": 51,
-        "allocation": "part",
-        "brand": "Silver Seitz",
-        "model": "Upgrade English Walnut Wood Set",
-        "type": "Wood Set",
-        "name": "Silver Seitz Upgrade English Walnut Wood Set (CRV3) | NEW",
-        "price": 3500,
-        "refNumber": "ss-ws-ew-crv3",
-        "imageCount": 2,
-        "autoplay": false,
-        "transition": true,
-        "arrows": true,
-        "showMoreInfo": true,
-        "showAddToCart": false,
-        "showBuyNow": false,
-        "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_06dc29edf6dccfa108dd9558f85b231f"
-    },
+    
     {
         "id": 52,
         "allocation": "part",
@@ -966,7 +873,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_a699b9e631e55fbef41826c6953cd15f"
+        "buyLink": "contact.html"
     },
     {
         "id": 53,
@@ -985,7 +892,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_5fc21b187639ee85db50929282066bfe"
+        "buyLink": "contact.html"
     },
     {
         "id": 54,
@@ -1004,7 +911,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_f30da327ed0a4f906c42e5a990819edb"
+        "buyLink": "contact.html"
     },
     {
         "id": 55,
@@ -1023,26 +930,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_e6ca0163dcb3323d89eb182b1824d2de"
-    },
-    {
-        "id": 56,
-        "allocation": "part",
-        "brand": "Perazzi",
-        "model": "Perazzi Gen 2",
-        "type": "Choke Set",
-        "name": "Perazzi Gen 2 Chokes (20ga.) | USED",
-        "price": 75,
-        "refNumber": "pi-gen2-c-20-crv1",
-        "imageCount": 2,
-        "autoplay": false,
-        "transition": true,
-        "arrows": true,
-        "showMoreInfo": true,
-        "showAddToCart": false,
-        "showBuyNow": false,
-        "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_e914e793fc0069395c9cd809c12223b3"
+        "buyLink": "contact.html"
     },
     {
         "id": 57,
@@ -1061,7 +949,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_715c74adce7d5fea34f876ddd3abffee"
+        "buyLink": "contact.html"
     },
     {
         "id": 58,
@@ -1080,7 +968,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_27d1604c392750390f731033c4e93ba1"
+        "buyLink": "contact.html"
     },
     {
         "id": 59,
@@ -1099,7 +987,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_e805b064bfd5cec9669d7f821c467dab"
+        "buyLink": "contact.html"
     },
     {
         "id": 60,
@@ -1118,7 +1006,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_458fc869f6c54eadf9abb53f0309053a"
+        "buyLink": "contact.html"
     },
     {
         "id": 61,
@@ -1137,7 +1025,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_417ef00a3dee02f7226f52479e7ebf9e"
+        "buyLink": "contact.html"
     },
     {
         "id": 62,
@@ -1156,7 +1044,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_cbe44cedc6e316de7232205a7c8a6034"
+        "buyLink": "contact.html"
     },
     {
         "id": 63,
@@ -1175,7 +1063,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_c50951d3b40b2574d0fe02487a92c169"
+        "buyLink": "contact.html"
     },
     {
         "id": 64,
@@ -1194,7 +1082,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_b556a2a2040df32d23141df08249cc6c"
+        "buyLink": "contact.html"
     },
     {
         "id": 65,
@@ -1213,7 +1101,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_496d694de61cd8874712c9ea75ec73b5"
+        "buyLink": "contact.html"
     },
     {
         "id": 66,
@@ -1232,7 +1120,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_872a6ddce637fab9138491efd7b678c9"
+        "buyLink": "contact.html"
     },
     {
         "id": 67,
@@ -1251,7 +1139,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_90e4f470f004e9908bdb384e530890d6"
+        "buyLink": "contact.html"
     },
     {
         "id": 68,
@@ -1270,7 +1158,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_1a10d0ae244fc380993896e5b69dd652"
+        "buyLink": "contact.html"
     },
     {
         "id": 70,
@@ -1289,7 +1177,7 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_90e4f470f004e9908bdb384e530890d6"
+        "buyLink": "contact.html"
     },
     {
         "id": 71,
@@ -1308,6 +1196,6 @@
         "showAddToCart": false,
         "showBuyNow": false,
         "showContact": false,
-        "buyLink": "https://swipesimple.com/links/lnk_90e4f470f004e9908bdb384e530890d6"
+        "buyLink": "contact.html"
     }
 ]
