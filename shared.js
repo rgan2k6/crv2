@@ -455,3 +455,32 @@ fetchListings();
             window.top.location.href = `search.html?query=${encodeURIComponent(query)}`;
         }
     }
+(function() {
+    // Get current page without extension, e.g. "rottweilguns"
+    const page = location.pathname.split('/').pop().replace('.html', '');
+    fetch('switches.json')
+        .then(response => response.json())
+        .then(switches => {
+            if (switches[page]) {
+                const msgBox = document.createElement('div');
+                msgBox.textContent = 'None available, check back later!';
+                msgBox.style.background = '#ffd7d7';
+                msgBox.style.color = '#a00';
+                msgBox.style.border = '2px solid #a00';
+                msgBox.style.padding = '16px';
+                msgBox.style.margin = '24px auto';
+                msgBox.style.maxWidth = '420px';
+                msgBox.style.textAlign = 'center';
+                msgBox.style.fontWeight = 'bold';
+                msgBox.style.fontSize = '1.2em';
+                msgBox.id = 'none-available-box';
+                // Insert message below the brand title if present
+                const brandTitle = document.querySelector('.brand');
+                if (brandTitle && brandTitle.parentNode) {
+                    brandTitle.parentNode.insertBefore(msgBox, brandTitle.nextSibling);
+                } else {
+                    document.body.insertBefore(msgBox, document.body.firstChild);
+                }
+            }
+        });
+})();
