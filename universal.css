@@ -1,6 +1,6 @@
 /*general*/
 body {margin-left: 0; margin-right: 0; padding: 0;}
-html {background: url(assets/images/bgb.png) no-repeat center center fixed;  -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+html {background: gray;}
 .head {border-bottom: 2px solid; background-color: rgba(0, 0, 0, 0.5); margin-top: 0; padding: 10px 10px 10px 10px}
 .hidden {display: none;}
 a {text-decoration: none; color: black; font-family: rodchenko;}
