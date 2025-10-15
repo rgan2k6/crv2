@@ -940,7 +940,7 @@
         "type": "Chokes",
         "name": "Perazzi Type 1 Chokes | USED",
         "price": 85,
-        "refNumber": "pi-gen2-c-20-crv1",
+        "refNumber": "pi-type1-c-12-crv1",
         "imageCount": 2,
         "autoplay": false,
         "transition": true,
