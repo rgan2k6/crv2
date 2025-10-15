@@ -1180,25 +1180,6 @@
         "buyLink": "contact.html"
     },
         {
-        "id": 72,
-        "allocation": "part",
-        "brand": "Perazzi",
-        "model": "Perazzi Gen 2",
-        "type": "Chokes",
-        "name": "Perazzi Gen 2 Chokes | USED",
-        "price": 75,
-        "refNumber": "pi-gen2-c-12-crv2",
-        "imageCount": 2,
-        "autoplay": false,
-        "transition": true,
-        "arrows": true,
-        "showMoreInfo": true,
-        "showAddToCart": false,
-        "showBuyNow": false,
-        "showContact": false,
-        "buyLink": "contact.html"
-    },
-        {
         "id": 73,
         "allocation": "part",
         "brand": "Perazzi",
