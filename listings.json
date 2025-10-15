@@ -913,16 +913,16 @@
         "showContact": false,
         "buyLink": "contact.html"
     },
-    {
-        "id": 55,
+        {
+        "id": 57,
         "allocation": "part",
         "brand": "Perazzi",
-        "model": "Perazzi Gen 2",
+        "model": "Perazzi Type 1",
         "type": "Choke Set",
-        "name": "Perazzi Gen 2 Chokes (12ga.) | USED",
-        "price": 75,
-        "refNumber": "pi-gen2-c-12-crv1",
-        "imageCount": 2,
+        "name": "Perazzi Type 1 Chokes (12ga.) | USED",
+        "price": 85,
+        "refNumber": "pi-type1-c-rev0",
+        "imageCount": 1,
         "autoplay": false,
         "transition": true,
         "arrows": true,
@@ -1197,5 +1197,24 @@
         "showBuyNow": false,
         "showContact": false,
         "buyLink": "contact.html"
-    }
+    },
+        {
+        "id": 55,
+        "allocation": "part",
+        "brand": "Perazzi",
+        "model": "Perazzi Gen 2",
+        "type": "Choke Set",
+        "name": "Perazzi Gen 2 Chokes (12ga.) | USED",
+        "price": 75,
+        "refNumber": "pi-gen2-c-12-crv2",
+        "imageCount": 2,
+        "autoplay": false,
+        "transition": true,
+        "arrows": true,
+        "showMoreInfo": true,
+        "showAddToCart": false,
+        "showBuyNow": false,
+        "showContact": false,
+        "buyLink": "contact.html"
+    },
 ]
