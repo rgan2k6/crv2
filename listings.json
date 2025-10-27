@@ -761,25 +761,6 @@
         "buyLink": "contact.html"
     },
     {
-        "id": 46,
-        "allocation": "part",
-        "brand": "Krieghoff",
-        "model": "Krieghoff",
-        "type": "Choke Set",
-        "name": "Rhino Choke Set for Krieghoff (CRV1) | USED",
-        "price": 150,
-        "refNumber": "ro-c-crv1",
-        "imageCount": 2,
-        "autoplay": false,
-        "transition": true,
-        "arrows": true,
-        "showMoreInfo": true,
-        "showAddToCart": false,
-        "showBuyNow": false,
-        "showContact": false,
-        "buyLink": "contact.html"
-    },
-    {
         "id": 47,
         "allocation": "part",
         "brand": "Silver Seitz",
@@ -855,26 +836,7 @@
         "showContact": false,
         "buyLink": "contact.html"
     },
-    
-    {
-        "id": 52,
-        "allocation": "part",
-        "brand": "Silver Seitz",
-        "model": "Turkish Walnut Wood Set",
-        "type": "Wood Set",
-        "name": "Silver Seitz Turkish Walnut Wood Set (CRV1) | USED",
-        "price": 2500,
-        "refNumber": "ss-ws-tw-crv1",
-        "imageCount": 2,
-        "autoplay": false,
-        "transition": true,
-        "arrows": true,
-        "showMoreInfo": true,
-        "showAddToCart": false,
-        "showBuyNow": false,
-        "showContact": false,
-        "buyLink": "contact.html"
-    },
+
     {
         "id": 53,
         "allocation": "part",
