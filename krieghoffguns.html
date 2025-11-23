@@ -4,6 +4,9 @@
     <title>Krieghoff Guns | CRV Custom Arms</title>
     <meta name="description" content="Krieghoff guns for sale.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
     <link rel="canonical" href="https://crvcustomarms.com/krieghoffguns.html">
     <link rel="stylesheet" href="universal.css">
 </head>
@@ -24,8 +27,14 @@
 	<!-- Firearm Selection Bar -->
     <div class="sorting-container">
         <label for="brandFilter">Filter by Brand:</label>
-        <select id="brandFilter" onchange="redirectToBrandPage()">
+        <select id="brandFilter" onchange="updateBrandFilter()">
+            <option value="Perazzi" selected>Perazzi</option>
             <option value="all">All Brands</option>
+        </select>
+
+        <label for="modelFilter">Filter by Model:</label>
+        <select id="modelFilter">
+            <option value="all">All Models</option>
         </select>
 
         <label for="typeFilter">Filter by Type:</label>
@@ -40,8 +49,13 @@
         <input type="number" id="maxPrice" placeholder="Max Price" min="0">
 
         <button onclick="filterListings()">Apply Filters</button>
-        <button onclick="removeFilters()">Remove Filters</button> <!-- New Button -->
+        <button onclick="removeFilters()">Remove Filters</button>
     </div>
+
+    <!-- Hidden Allocation Filter -->
+    <select id="allocationFilter" class="hidden">
+        <option value="gun" selected>Gun</option>
+    </select>
 
     <!-- Listings Container -->
     <div id="listingsContainer"></div>
