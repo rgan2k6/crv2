@@ -51,15 +51,25 @@
 
     <!-- Custom Script for Krieghoff Page -->
     <script>
-        // Override the displayListings function to show only Krieghoff listings
-        function displayListings(filteredListings = listings) {
-            const KrieghoffListings = filteredListings.filter(item => item.brand === "Krieghoff");
-            console.log('Krieghoff listings:', KrieghoffListings); // Debugging line
+        let brandFilter = "Perazzi"; // Default brand filter
 
+        function toggleFilters() {
+            const sortingContainer = document.querySelector('.sorting-container');
+            sortingContainer.style.display = sortingContainer.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function updateBrandFilter() {
+            const brandSelect = document.getElementById("brandFilter");
+            brandFilter = brandSelect.value;
+            displayListings();
+        }
+
+        function displayListings(filteredListings = listings) {
+            const filtered = filteredListings.filter(item => item.allocation === "gun" && (brandFilter === "all" || item.brand === brandFilter));
             const listingsContainer = document.getElementById("listingsContainer");
             listingsContainer.innerHTML = "";
 
-            KrieghoffListings.forEach(listing => {
+            filtered.forEach(listing => {
                 const listingCard = document.createElement("div");
                 listingCard.classList.add("listing-card");
 
@@ -114,7 +124,7 @@
                 const details = document.createElement("div");
                 details.innerHTML = `
                     <h2>${listing.name}</h2>
-                    <p>Price: ${formatPrice(listing.price)}</p>
+                    <p>Price: ${listing.price !== null ? formatPrice(listing.price) : ''}</p>
                     <button class="more-info" onclick="window.location.href='${listing.refNumber}.html'">More Info</button>
                     <button class="contact" onclick="window.location.href='contact.html'">Contact</button>
                 `;
@@ -126,24 +136,11 @@
             });
         }
 
-    // Corrected removeFilters function
-    function removeFilters() {
-        // Reset type filter to "All Types"
-        document.getElementById("typeFilter").value = "all";
+        // Initial setup
+        fetchListings().then(() => {
+            displayListings(); // Display listings based on the default brand filter
+        });
 
-        // Reset price inputs
-        document.getElementById("minPrice").value = "";
-        document.getElementById("maxPrice").value = "";
-
-        // Display all Krieghoff listings without affecting the brand filter
-        displayListings(listings);
-    }
-
-    // Initial setup
-    fetchListings().then(() => {
-        populateFilters("Krieghoff"); // Correctly preselects "Krieghoff" in the dropdown
-        displayListings(); // Relies on the overridden function to filter by Krieghoff
-    });
     </script>
 
     <!-- Bottom Section -->
