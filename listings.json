@@ -1152,7 +1152,7 @@
         "imageCount": 2,
         "autoplay": false,
         "transition": true,
-        "arrows": false,
+        "arrows": true,
         "showMoreInfo": true,
         "showAddToCart": false,
         "showBuyNow": false,
