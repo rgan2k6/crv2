@@ -1159,6 +1159,25 @@
         "showContact": false,
         "buyLink": "contact.html"
     },
+	{
+        "id": 70.1,
+        "allocation": "part",
+        "brand": "Silver Seitz",
+        "model": "Wood Set",
+        "type": "Wood Set",
+        "name": "Silver Seitz Wood Set (CRV1) | USED",
+        "price": 3500,
+        "refNumber": "ss-ws-crv1",
+        "imageCount": 2,
+        "autoplay": false,
+        "transition": true,
+        "arrows": true,
+        "showMoreInfo": true,
+        "showAddToCart": false,
+        "showBuyNow": false,
+        "showContact": false,
+        "buyLink": "contact.html"
+    },
     {
         "id": 71,
         "allocation": "part",
