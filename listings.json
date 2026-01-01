@@ -133,25 +133,6 @@
         "buyLink": "contact.html"
 	},
     {
-        "id": 8,
-        "allocation": "gun",
-        "brand": "Rottweil",
-        "model": "72 AAT",
-        "type": "Shotgun",
-        "name": "Rottweil 72 AAT (#CRV1) | LIKE NEW",
-        "price": 1600,
-        "refNumber": "rl-72aat-crv1",
-        "imageCount": 4,
-        "autoplay": true,
-        "transition": true,
-        "arrows": false,
-        "showMoreInfo": true,
-        "showAddToCart": false,
-        "showBuyNow": false,
-        "showContact": false,
-        "buyLink": "contact.html"
-    },
-    {
         "id": 9,
         "allocation": "gun",
         "brand": "Winchester",
@@ -987,8 +968,27 @@
         "showContact": false,
         "buyLink": "contact.html"
     },
-    {
+	{
         "id": 50,
+        "allocation": "part",
+        "brand": "Silver Seitz",
+        "model": "Barrel",
+        "type": "Barrel",
+        "name": "Silver Seitz Barrel | USED",
+        "price": 2200,
+        "refNumber": "ss-b-XXX",
+        "imageCount": 2,
+        "autoplay": false,
+        "transition": true,
+        "arrows": true,
+        "showMoreInfo": true,
+        "showAddToCart": false,
+        "showBuyNow": false,
+        "showContact": false,
+        "buyLink": "contact.html"
+    },
+    {
+        "id": 51,
         "allocation": "part",
         "brand": "Silver Seitz",
         "model": "English Walnut Wood Set",
