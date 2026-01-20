@@ -114,25 +114,6 @@
         "buyLink": "contact.html"
     },
     {
-        "id": 7.01,
-        "allocation": "gun",
-        "brand": "Beretta",
-        "model": "680",
-        "type": "Shotgun",
-        "name": "Beretta 680 (#CRV1) | USED",
-        "price": 1500,
-        "refNumber": "ba-680-CRV1",
-        "imageCount": 4,
-        "autoplay": true,
-        "transition": true,
-        "arrows": false,
-        "showMoreInfo": true,
-        "showAddToCart": false,
-        "showBuyNow": false,
-        "showContact": false,
-        "buyLink": "contact.html"
-    },
-    {
 	    "id": 7.5,
         "allocation": "gun",
         "brand": "Krieghoff",
