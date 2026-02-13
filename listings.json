@@ -1,24 +1,5 @@
 [
     {
-        "id": 4,
-        "allocation": "gun",
-        "brand": "Perazzi",
-        "model": "TM1",
-        "type": "Shotgun",
-        "name": "Perazzi TM1 (#1224) | USED",
-        "price": 2500,
-        "refNumber": "pi-tm1-1224",
-        "imageCount": 2,
-        "autoplay": true,
-        "transition": true,
-        "arrows": false,
-        "showMoreInfo": true,
-        "showAddToCart": false,
-        "showBuyNow": false,
-        "showContact": false,
-        "buyLink": "contact.html"
-    },
-    {
         "id": 5,
         "allocation": "gun",
         "brand": "Perazzi",
@@ -132,25 +113,6 @@
         "showContact": false,
         "buyLink": "contact.html"
 	},
-    {
-        "id": 9,
-        "allocation": "gun",
-        "brand": "Winchester",
-        "model": "Model 68",
-        "type": "Rifle",
-        "name": "Winchester Model 68 (#CRV1) | USED",
-        "price": 160,
-        "refNumber": "wr-model68-crv1",
-        "imageCount": 3,
-        "autoplay": true,
-        "transition": true,
-        "arrows": false,
-        "showMoreInfo": true,
-        "showAddToCart": false,
-        "showBuyNow": false,
-        "showContact": false,
-        "buyLink": "contact.html"
-    },
     {
         "id": 10,
         "allocation": "gun",
