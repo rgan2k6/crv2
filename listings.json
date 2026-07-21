@@ -646,25 +646,6 @@
         "buyLink": "contact.html"
     },
     {
-        "id": 35,
-        "allocation": "part",
-        "brand": "MEC",
-        "model": "9000H",
-        "type": "Reloader",
-        "name": "MEC 9000H Hydraulic Reloader (CRV1) | USED",
-        "price": 900,
-        "refNumber": "mec-9000h-crv1",
-        "imageCount": 4,
-        "autoplay": false,
-        "transition": true,
-        "arrows": true,
-        "showMoreInfo": true,
-        "showAddToCart": false,
-        "showBuyNow": false,
-        "showContact": false,
-        "buyLink": "contact.html"
-    },
-    {
         "id": 36,
         "allocation": "part",
         "brand": "Perazzi",
