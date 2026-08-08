@@ -1196,6 +1196,25 @@
         "showContact": false,
         "buyLink": "contact.html"
     },
+	{
+        "id": 70.3,
+        "allocation": "part",
+        "brand": "Silver Seitz",
+        "model": "Wood Stock Set",
+        "type": "Wood Set",
+        "name": "Silver Seitz Left Hand Stock Set (CRV6) | USED",
+        "price": 750,
+        "refNumber": "ss-ws-lh-crv6",
+        "imageCount": 2,
+        "autoplay": false,
+        "transition": true,
+        "arrows": true,
+        "showMoreInfo": true,
+        "showAddToCart": false,
+        "showBuyNow": false,
+        "showContact": false,
+        "buyLink": "contact.html"
+    },
     {
         "id": 71,
         "allocation": "part",
